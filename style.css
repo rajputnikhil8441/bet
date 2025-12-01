@@ -102,9 +102,9 @@ button {
 }
 
 /* Normal phones (iPhone 11/12/13/14/15) */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .logo {
-    width: 260px; /* even bigger for modern iPhones */
+    width: 560px; /* even bigger for modern iPhones */
   }
 }
 
