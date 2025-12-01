@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* PAGE BACKGROUND + CENTER EVERYTHING */
+/* PAGE CENTERING */
 html, body {
   height: 100%;
   display: flex;
@@ -17,99 +17,68 @@ html, body {
   padding: 20px;
 }
 
-/* LOGO AREA */
+/* LOGO */
 .logo-container {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-bottom: 15px;
 }
 
-/* LOGO — RESPONSIVE */
 .logo {
-  width: 200px;        /* Default size */
-  max-width: 70%;      /* Ensures logo fits small screens */
+  width: 240px;        /* BIG default logo */
   height: auto;
 }
 
-/* MAIN LOGIN BOX */
+/* LOGIN CONTAINER */
 .contain {
   width: 100%;
-  max-width: 380px;
+  max-width: 360px;
   background: white;
   border-radius: 10px;
-  padding: 22px;
+  padding: 20px;
   text-align: center;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
 }
 
 /* TITLE */
 .login-title {
-  font-size: 26px;
-  color: #1998ec;
+  font-size: 24px;
   font-weight: 600;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-}
-
-/* INPUT GROUP */
-.input-group {
-  position: relative;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.input-group i {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
   color: #1998ec;
+  margin-bottom: 20px;
 }
 
 /* INPUT FIELDS */
-.inp1, .inp2 {
+input {
   width: 100%;
-  height: 42px;
-  padding: 8px 14px;
-  padding-right: 35px;
+  height: 44px;
+  padding: 10px 14px;
   border-radius: 6px;
   border: 1px solid #ccc;
+  margin-bottom: 15px;
   font-size: 16px;
 }
 
-/* BUTTON STYLE */
+/* BUTTONS */
 button {
   width: 100%;
-  height: 42px;
-  margin-top: 8px;
+  height: 44px;
   background: #1998ec;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 6px;
   font-size: 17px;
+  margin-bottom: 10px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-button i {
-  position: absolute;
-  right: 12px;
+  font-weight: 500;
 }
 
 /* reCAPTCHA INFO */
 .recaptcha-info {
+  margin-top: 10px;
   font-size: 12px;
-  margin-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 4px;
+  color: #333;
+  line-height: 1.4;
 }
 
 .recaptcha-info a {
@@ -117,53 +86,36 @@ button i {
   text-decoration: none;
 }
 
-.recaptcha-info a:hover {
-  text-decoration: underline;
-}
+/* ===================================== */
+/* RESPONSIVE TUNING (IPHONE OPTIMIZED) */
+/* ===================================== */
 
-/* -------------------------------------------------- */
-/* RESPONSIVE QUERIES */
-/* -------------------------------------------------- */
-
-/* SMALL MOBILE (<400px) */
+/* Small devices (iPhone SE, Mini) */
 @media (max-width: 400px) {
   .logo {
-    width: 150px;       /* Bigger than before (looks better) */
-  }
-
-  .login-title {
-    font-size: 22px;
-  }
-
-  .inp1, .inp2, button {
-    height: 40px;
-    font-size: 15px;
+    width: 220px; /* still large */
   }
 
   .contain {
-    padding: 16px;
+    padding: 15px;
   }
 }
 
-/* TABLETS & BIG PHONES (<768px) */
+/* Normal phones (iPhone 11/12/13/14/15) */
 @media (max-width: 768px) {
   .logo {
-    width: 180px;
+    width: 260px; /* even bigger for modern iPhones */
+  }
+}
+
+/* Desktop / Laptop */
+@media (min-width: 1024px) {
+  .logo {
+    width: 280px; /* bigger on desktop */
   }
 
   .contain {
     max-width: 420px;
-  }
-}
-
-/* LARGE SCREENS (Laptops / Desktop >1024px) */
-@media (min-width: 1024px) {
-  .logo {
-    width: 230px;   /* Bigger logo for desktop */
-  }
-
-  .contain {
-    max-width: 430px;
-    padding: 26px;
+    padding: 25px;
   }
 }
