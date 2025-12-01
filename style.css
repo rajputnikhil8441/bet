@@ -1,0 +1,260 @@
+/* Reset margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Full height for body and html */
+html,
+body {
+  font-family: sans-serif;
+  height: 100%; /* Set full height of the viewport */
+  display: flex; /* Use Flexbox */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  background-color: #1998ec; /* Background color */
+}
+
+/* Logo Container Styling */
+.logo-container {
+  width: 550px; /* Match width of the main container */
+  background-color: #1998ec; /* Match page background color */
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 0px 0; /* Optional: add some padding */
+  margin-bottom: -85px; /* Space between logo and main container */
+}
+
+/* Container styling */
+.contain {
+  font-family: sans-serif;
+  text-align: center; /* Center text */
+  width: 350px; /* Width of the container */
+  height: 350px; /* Height of the container */
+  background-color: white; /* Container background color */
+  display: flex; /* Use Flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  color: black; /* Text color for readability */
+  border-radius: 4px; /* 4px rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+/* Additional styles for text and inputs can be added here */
+.contain .text {
+  font-family: sans-serif;
+  position: relative;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center; /* Center text elements */
+}
+
+.inp1,
+.inp2 {
+  font-family: sans-serif;
+  width: 310px; /* Set width to 310px */
+  height: 38px; /* Set height to 38px */
+  padding: 6px 12px;
+  margin: 10px 0px;
+  box-sizing: border-box; /* Include padding in width */
+  border: 1px solid #ccc; /* Input border */
+  border-radius: 4px; /* Rounded input corners */
+  background-color: white; /* Background color for inputs */
+  color: black; /* Text color for inputs */
+}
+
+.login-title {
+  font-weight: 550;
+  font-family: sans-serif;
+  color: #1998ec; /* Title color */
+  font-size: 24px; /* Title font size */
+  margin-bottom: 20px; /* Space between title and input */
+  text-align: center; /* Center-align the title */
+  font-family: sans-serif; /* Font family */
+}
+
+button {
+  font-family: sans-serif;
+  width: 310px; /* Set width to 310px */
+  height: 38px; /* Set height to 38px */
+  margin: 2px 0; /* Set vertical margin to 2px */
+  background-color: #1998ec; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded button corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 4%;
+}
+
+button:hover {
+  background-color: #1998ec; /* Darker shade on hover */
+}
+
+a {
+  font-family: sans-serif;
+  font-size: 12px; /* Font size for links */
+  color: #0073e6; /* Link color */
+  text-decoration: none; /* No underline */
+  margin: 0 3px; /* Space between links */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+p {
+  font-size: 12px; /* Font size for paragraphs */
+  color: black; /* Text color for paragraphs */
+  text-align: center; /* Center align text */
+}
+
+/* Existing logo styling */
+.logo {
+  width: 170px; /* Set width to 170px */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensures it's treated as a block element */
+}
+.input-group {
+  position: relative; /* Make position relative for absolute positioning of the icon */
+  width: 310px; /* Match input field width */
+}
+
+.input-group i {
+  position: absolute; /* Position the icon */
+  right: 10px; /* Space from left */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  color: #1998ec; /* Icon color */
+}
+
+.inp1,
+.inp2 {
+  width: 100%; /* Full width to occupy parent */
+  height: 38px; /* Set height to 38px */
+  padding: 6px 12px 6px 30px; /* Add padding on the left for the icon */
+  box-sizing: border-box; /* Include padding in width */
+  border: 1px solid #ccc; /* Input border */
+  border-radius: 4px; /* Rounded input corners */
+  background-color: white; /* Background color for inputs */
+  color: black; /* Text color for inputs */
+}
+/* Button styling with centered text and right-aligned icons */
+button {
+  width: 310px; /* Set width of the button */
+  height: 38px; /* Set height of the button */
+  padding: 6px 12px; /* Standard padding */
+  background-color: #1998ec; /* Background color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  display: flex; /* Flexbox for layout */
+  align-items: center; /* Center text and icon vertically */
+  justify-content: center; /* Center the text horizontally */
+  position: relative; /* For absolute positioning of the icon */
+  font-size: 16px; /* Font size for button text */
+}
+
+/* Icon styling inside the button */
+button i {
+  position: absolute; /* Position icon absolutely within button */
+  right: 12px; /* Align icon to the right edge of the button */
+  color: white; /* Icon color */
+}
+
+/* Container for reCAPTCHA info */
+.recaptcha-info {
+  display: flex; /* Use Flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap to a new line */
+  gap: 3px; /* Small space between items */
+  font-size: 12px; /* Font size for readability */
+  align-items: baseline; /* Align items to the text baseline */
+  color: black; /* Text color */
+  text-align: left; /* Left-align text */
+}
+
+/* Styling for anchor links */
+.recaptcha-info a {
+  color: #0073e6; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.recaptcha-info a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Paragraph styling within the recaptcha-info container */
+.recaptcha-info p {
+  margin: 0; /* Remove default margin for cleaner layout */
+}
+
+/* Styling for the Login title */
+.login-title {
+  color: #1998ec;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space between text and icon */
+}
+
+/* Optional icon-specific styling */
+.login-title i {
+  color: #1998ec; /* Match icon color to title */
+  font-size: 24px; /* Icon size */
+}
+
+/* Navbar Second */
+/* Navbar Second */
+.navbar-third {
+  display: flex;
+  text-transform: capitalize;
+  background-color: #1998ec;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 65px;
+  z-index: 9;
+  overflow-x: auto;
+  white-space: nowrap;
+  cursor: grab;
+  padding: 0px 9px;
+}
+
+.navbar-third.active {
+  cursor: grabbing;
+}
+
+.navbar-third ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navbar-third ul li {
+  padding: 15px;
+  font-size: 14px; /* Ensures list items are 14.5px */
+}
+
+.navbar-third ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px; /* Ensures links are 14.5px */
+}
+
+.navbar-third ul li a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  width: 340px;
+  margin-bottom: 100px;
+}

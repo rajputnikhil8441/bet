@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLAYZONE9</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Logo Container -->
+    <div class="logo-container">
+      <img src="logo2.png" alt="Logo" class="logo" />
+      <!-- Ensure the path to your logo is correct -->
+    </div>
+
+    <!-- Main Container -->
+    <div class="contain">
+      <div class="text">
+        <h4 class="login-title">Login <i class="fas fa-key"></i></h4>
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <!-- User icon -->
+          <input class="inp1" type="text" placeholder="User Name" />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <!-- Lock icon -->
+          <input class="inp2" type="password" placeholder="Password" />
+        </div>
+        <button><i class="fas fa-sign-in-alt"></i> Login</button>
+        <!-- Login button with icon -->
+        <button id="demoLoginButton">
+          <i class="fas fa-sign-in-alt"></i> Login With Demo
+        </button>
+        <!-- Demo login button with icon -->
+        <div class="recaptcha-info">
+          <p>This site is protected by reCAPTCHA and the Google</p>
+          <a href="#">Privacy Policy</a>
+          <p>and</p>
+          <a href="#">Terms of Services</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript for demo login redirection
+      document
+        .getElementById("demoLoginButton")
+        .addEventListener("click", function () {
+          window.location.href = "index.html"; // Replace with the actual path to your homepage
+        });
+    </script>
+  </body>
+</html>
