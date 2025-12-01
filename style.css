@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Makes width responsive & easier to control */
+  box-sizing: border-box;
 }
 
 /* PAGE BACKGROUND + CENTER EVERYTHING */
@@ -10,41 +10,42 @@ html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;     /* Center vertically */
-  align-items: center;         /* Center horizontally */
+  justify-content: center;
+  align-items: center;
   background-color: #1998ec;
   font-family: sans-serif;
-  padding: 20px;               /* Helps spacing on mobile */
+  padding: 20px;
 }
 
-/* LOGO */
+/* LOGO AREA */
 .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
+/* LOGO — RESPONSIVE */
 .logo {
-  width: 170px;                /* Base size */
-  max-width: 50%;              /* Makes logo shrink on mobile */
+  width: 200px;        /* Default size */
+  max-width: 70%;      /* Ensures logo fits small screens */
   height: auto;
 }
 
 /* MAIN LOGIN BOX */
 .contain {
   width: 100%;
-  max-width: 360px;            /* Good width on desktop */
+  max-width: 380px;
   background: white;
-  border-radius: 8px;
-  padding: 20px;
+  border-radius: 10px;
+  padding: 22px;
   text-align: center;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
 }
 
 /* TITLE */
 .login-title {
-  font-size: 24px;
+  font-size: 26px;
   color: #1998ec;
   font-weight: 600;
   margin-bottom: 20px;
@@ -53,7 +54,7 @@ html, body {
   gap: 8px;
 }
 
-/* INPUT GROUP (icon + input) */
+/* INPUT GROUP */
 .input-group {
   position: relative;
   width: 100%;
@@ -69,29 +70,27 @@ html, body {
 }
 
 /* INPUT FIELDS */
-.inp1,
-.inp2 {
+.inp1, .inp2 {
   width: 100%;
-  height: 40px;
+  height: 42px;
   padding: 8px 14px;
-  padding-right: 35px; /* Makes space for icon */
-  border-radius: 5px;
+  padding-right: 35px;
+  border-radius: 6px;
   border: 1px solid #ccc;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /* BUTTON STYLE */
 button {
   width: 100%;
-  height: 40px;
+  height: 42px;
   margin-top: 8px;
   background: #1998ec;
   color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 6px;
+  font-size: 17px;
   cursor: pointer;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,7 +109,7 @@ button i {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3px;
+  gap: 4px;
 }
 
 .recaptcha-info a {
@@ -122,47 +121,49 @@ button i {
   text-decoration: underline;
 }
 
-/* ------------------------------------------- */
-/* RESPONSIVE DESIGN */
-/* ------------------------------------------- */
+/* -------------------------------------------------- */
+/* RESPONSIVE QUERIES */
+/* -------------------------------------------------- */
 
-/* SMALL MOBILE DEVICES (less than 400px wide) */
+/* SMALL MOBILE (<400px) */
 @media (max-width: 400px) {
   .logo {
-    width: 140px;             /* Slightly smaller logo */
-  }
-
-  .contain {
-    padding: 15px;
+    width: 150px;       /* Bigger than before (looks better) */
   }
 
   .login-title {
-    font-size: 20px;
+    font-size: 22px;
   }
 
-  button,
-  .inp1,
-  .inp2 {
-    height: 38px;
+  .inp1, .inp2, button {
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .contain {
+    padding: 16px;
   }
 }
 
-/* TABLETS or BIGGER PHONES (less than 768px) */
+/* TABLETS & BIG PHONES (<768px) */
 @media (max-width: 768px) {
+  .logo {
+    width: 180px;
+  }
+
   .contain {
     max-width: 420px;
   }
 }
 
-/* LARGE SCREENS */
+/* LARGE SCREENS (Laptops / Desktop >1024px) */
 @media (min-width: 1024px) {
   .logo {
-    width: 200px;             /* Slightly larger on big screens */
+    width: 230px;   /* Bigger logo for desktop */
   }
 
   .contain {
-    max-width: 420px;
-    padding: 25px;
+    max-width: 430px;
+    padding: 26px;
   }
 }
-
