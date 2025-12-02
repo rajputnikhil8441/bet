@@ -39,7 +39,7 @@ body {
   height: auto;
 }
 
-@keyframes bounce {
+/*@keyframes bounce {
   0%, 100% {
     transform: translateY(0);
   }
