@@ -118,6 +118,7 @@ button {
 
 /* WHATSAPP JOIN BUTTON */
 .whatsapp-join {
+  font-size: 12px;
   margin-top: 12px;
   display: flex;
   justify-content: center;
