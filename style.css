@@ -16,9 +16,9 @@
   --shadow: 0px 4px 12px rgba(0, 0, 0, 0.22);
 }
 
-/* PAGE BACKGROUND */
+/* PAGE BACKGROUND (PLAYZONE9 GRADIENT) */
 body {
-  background: var(--primary);
+  background: linear-gradient(180deg, #0099E6 0%, #0066B3 100%);
   font-family: "roboto condensed", sans-serif; 
   display: flex;
   flex-direction: column;
@@ -38,13 +38,12 @@ body {
   height: auto;
 }
 
-/* LOGIN CONTAINER (99EXCH SIZE) */
+/* LOGIN CONTAINER */
 .contain {
   width: 92%;
   max-width: 350px;
   background: var(--card-bg);
   padding: 28px 25px 32px 25px;
-  /*border-radius: 2px;*/
   box-shadow: var(--shadow);
   text-align: center;
 }
@@ -54,7 +53,7 @@ body {
   display: none !important;
 }
 
-/* INPUT FIELDS (99EXCH STYLE) */
+/* INPUT FIELDS */
 .input-group input {
   width: 100%;
   height: 42px;
@@ -76,7 +75,7 @@ body {
   border-bottom: 2px solid var(--primary);
 }
 
-/* BUTTONS — SHARP CORNERS LIKE 99EXCH */
+/* BUTTONS */
 button {
   width: 100%;
   height: 44px;
@@ -112,7 +111,7 @@ button {
   text-decoration: none;
 }
 
-/* EMAIL (NO UNDERLINE) */
+/* EMAIL TEXT */
 .email-text {
   margin-top: 14px;
   font-size: 12px;
@@ -121,7 +120,7 @@ button {
   text-decoration: none !important;
 }
 
-/* DOTTED LINE BELOW EMAIL */
+/* DOTTED LINE */
 .email-text::after {
   content: "";
   display: block;
@@ -130,7 +129,7 @@ button {
   border-bottom: 2px dotted var(--primary);
 }
 
-/* WHATSAPP JOIN TEXT (NO BOX) */
+/* WHATSAPP JOIN TEXT */
 .whatsapp-join {
   font-size: 12px;
   margin-top: 4px;
@@ -150,7 +149,7 @@ button {
   margin-right: 5px;
 }
 
-/* FLOATING WHATSAPP SUPPORT BUTTON */
+/* FLOATING WHATSAPP BUTTON */
 .wa-support {
   position: fixed;
   bottom: 20px;
@@ -175,54 +174,52 @@ button {
   transform: scale(1.08);
 }
 
-
-
+/* TOP ALERT POPUP */
 .top-alert {
-    position: fixed;
-    top: -120px;                /* hidden initially */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;                 /* wide alert like your screenshot */
-    max-width: 600px;           /* optional limit */
-    background: #c0392b;        /* better red tone */
-    color: white;
-    padding: 18px 20px;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: 600;
+  position: fixed;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  background: #c0392b;
+  color: white;
+  padding: 18px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    transition: top 2s ease-in-out, opacity 0.3s;
-    opacity: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: top 2s ease-in-out, opacity 0.3s;
+  opacity: 0;
 
-    z-index: 9999;
+  z-index: 9999;
 }
 
 .top-alert.show {
-    top: 20px;                  /* slides down like your sample */
-    opacity: 1;
+  top: 20px;
+  opacity: 1;
 }
 
-/* Icon on left */
+/* ALERT ICON */
 .top-alert .alert-icon {
-    font-size: 28px;
+  font-size: 28px;
 }
 
-/* Close button */
+/* ALERT CLOSE BUTTON */
 .top-alert .alert-close {
-    cursor: pointer;
-    font-size: 22px;
-    font-weight: bold;
-    opacity: 0.9;
-    transition: opacity 0.2s;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  opacity: 0.9;
+  transition: opacity 0.2s;
 }
 
 .top-alert .alert-close:hover {
-    opacity: 1;
+  opacity: 1;
 }
-
