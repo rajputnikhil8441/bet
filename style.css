@@ -19,7 +19,7 @@
 /* PAGE BACKGROUND */
 body {
   background: var(--primary);
-  font-family: Arial, sans-serif;
+  font-family: roboto condensed, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
