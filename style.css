@@ -31,7 +31,7 @@ body {
 .logo-container {
   margin-top: 20px;
   margin-bottom: 15px;
-  animation: bounce 2s infinite;
+  /*animation: bounce 2s infinite;*/
 }
 
 .logo {
@@ -39,7 +39,7 @@ body {
   height: auto;
 }
 
-/*@keyframes bounce {
+@keyframes bounce {
   0%, 100% {
     transform: translateY(0);
   }
