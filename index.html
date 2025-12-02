@@ -7,52 +7,56 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
+
   <body>
-    <!-- Logo Container -->
+    <!-- LOGO -->
     <div class="logo-container">
       <img src="logo2.png" alt="Logo" class="logo" />
-      <!-- Ensure the path to your logo is correct -->
     </div>
 
-    <!-- Main Container -->
+    <!-- LOGIN BOX -->
     <div class="contain">
-      <div class="text">
-        <h4 class="login-title">Login <i class="fas fa-key"></i></h4>
-        <div class="input-group">
-          <i class="fas fa-user"></i>
-          <!-- User icon -->
-          <input class="inp1" type="text" placeholder="User Name" />
-        </div>
-        <div class="input-group">
-          <i class="fas fa-lock"></i>
-          <!-- Lock icon -->
-          <input class="inp2" type="password" placeholder="Password" />
-        </div>
-        <button><i class="fas fa-sign-in-alt"></i> Login</button>
-        <!-- Login button with icon -->
-        <button id="demoLoginButton">
-          <i class="fas fa-sign-in-alt"></i> Login With Demo
-        </button>
-        <!-- Demo login button with icon -->
-        <div class="recaptcha-info">
-          <p>This site is protected by reCAPTCHA and the Google</p>
-          <a href="#">Privacy Policy</a>
-          <p>and</p>
-          <a href="#">Terms of Services</a>
-        </div>
-      </div>
-    </div>
+      <h2 class="login-title">Login</h2>
 
-    <script>
-      // JavaScript for demo login redirection
-      document
-        .getElementById("demoLoginButton")
-        .addEventListener("click", function () {
-          window.location.href = "index.html"; // Replace with the actual path to your homepage
-        });
-    </script>
+      <div class="input-group">
+        <input type="text" placeholder="Username" />
+      </div>
+
+      <div class="input-group">
+        <input type="password" placeholder="Password" />
+      </div>
+
+      <button class="login-btn">
+        Login <i class="fas fa-sign-in-alt"></i>
+      </button>
+
+      <button class="demo-btn">
+        Login with Demo ID <i class="fas fa-sign-in-alt"></i>
+      </button>
+
+      <div class="recaptcha-info">
+        This site is protected by reCAPTCHA and the Google
+        <a href="#">Privacy Policy</a> and
+        <a href="#">Terms of Service</a> apply.
+      </div>
+
+      <p class="email-text">playzone9official@gmail.com</p>
+
+      <!-- WhatsApp Join Section -->
+      <a
+        href="https://wa.me/91XXXXXXXXXX"
+        target="_blank"
+        class="whatsapp-join"
+      >
+        <img src="whatsapp.png" class="wa-logo" /> JOIN WHATSAPP CHANNEL (BONUS)
+      </a>
+    </div>
+    <!-- WhatsApp Floating Support Button -->
+    <a href="https://wa.me/91XXXXXXXXXX" class="wa-support" target="_blank">
+      <img src="whatsapp.png" alt="WhatsApp Support" />
+    </a>
   </body>
 </html>
