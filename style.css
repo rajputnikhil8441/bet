@@ -175,3 +175,23 @@ button {
   transform: scale(1.08);
 }
 
+
+
+.top-alert {
+  position: fixed;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff3333;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: top 0.35s ease-in-out;
+  z-index: 9999;
+}
+.top-alert.show {
+  top: 20px;
+}
+
