@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PLAYZONE9</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -20,33 +20,37 @@
 
     <!-- LOGIN BOX -->
     <div class="contain">
-      <!--<h2 class="login-title">Login</h2>-->
-
+      <!-- USERNAME -->
       <div class="input-group">
-        <input type="text" placeholder="Username" />
+        <input type="text" id="username" placeholder="Desired Username" />
       </div>
 
+      <!-- PASSWORD -->
       <div class="input-group">
-        <input type="password" placeholder="Password" />
+        <input type="password" id="password" placeholder="New Password" />
       </div>
 
-      <button class="login-btn">
-        Login <i class="fas fa-sign-in-alt"></i>
+      <!-- SUBMIT BUTTON -->
+      <button class="login-btn" onclick="submitForm()">
+        Submit Request <i class="fas fa-paper-plane"></i>
       </button>
 
+      <!-- DEMO ID BUTTON -->
       <button class="demo-btn">
         Login with Demo ID <i class="fas fa-sign-in-alt"></i>
       </button>
 
+      <!-- RECAPTCHA TEXT -->
       <div class="recaptcha-info">
         This site is protected by reCAPTCHA and the Google
         <a href="#">Privacy Policy</a> and
         <a href="#">Terms of Service</a> apply.
       </div>
 
+      <!-- EMAIL -->
       <p class="email-text">playzone9official@gmail.com</p>
 
-      <!-- WhatsApp Join Section -->
+      <!-- WhatsApp Join -->
       <a
         href="https://wa.me/919555738726"
         target="_blank"
@@ -54,10 +58,66 @@
       >
         <img src="whatsapp.png" class="wa-logo" /> JOIN WHATSAPP CHANNEL (BONUS)
       </a>
+
+      <!-- SUCCESS MESSAGE -->
+      <p id="successMsg" style="display:none; color:green; text-align:center; margin-top:10px;">
+        Request Sent Successfully!
+      </p>
     </div>
-    <!-- WhatsApp Floating Support Button -->
+
+    <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/919555738726" class="wa-support" target="_blank">
       <img src="whatsapp2.png" alt="WhatsApp Support" />
     </a>
+
+    <!-- SCRIPT -->
+    <script>
+      const API_URL = "https://sheetdb.io/api/v1/ye9thoog76f80";
+
+      // Hash password safely before saving
+      async function sha256(str) {
+        const encoder = new TextEncoder();
+        const data = encoder.encode(str);
+        const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+      }
+
+      function submitForm() {
+        let username = document.getElementById("username").value.trim();
+        let password = document.getElementById("password").value.trim();
+
+        if (!username || !password) {
+          alert("Please fill both fields");
+          return;
+        }
+
+        // Get IP
+        fetch("https://api.ipify.org?format=json")
+          .then(res => res.json())
+          .then(async ipData => {
+            const hashedPassword = await sha256(password);
+
+            let data = {
+              data: [
+                {
+                  username: username,
+                  password: hashedPassword,
+                  ip: ipData.ip,
+                  timestamp: new Date().toLocaleString()
+                }
+              ]
+            };
+
+            fetch(API_URL, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(data)
+            }).then(() => {
+              document.getElementById("successMsg").style.display = "block";
+            });
+          });
+      }
+    </script>
   </body>
 </html>
