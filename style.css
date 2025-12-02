@@ -44,7 +44,7 @@ body {
   max-width: 350px;
   background: var(--card-bg);
   padding: 28px 25px 32px 25px;
-  border-radius: 0px;
+  border-radius: 2px;
   box-shadow: var(--shadow);
   text-align: center;
 }
