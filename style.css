@@ -19,7 +19,7 @@
 /* PAGE BACKGROUND */
 body {
   background: var(--primary);
-  font-family: "Poppins", sans-serif;  /* MATCHED FONT */
+  font-family: "Poppins", sans-serif; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,66 +29,67 @@ body {
 
 /* LOGO */
 .logo-container {
-  margin-top: 20px;
+  margin-top: 25px;
   margin-bottom: 12px;
 }
 
 .logo {
-  width: 230px;             /* Closer to 99exch proportion */
+  width: 230px;
   height: auto;
 }
 
-/* LOGIN CARD — EXACT LIKE 99EXCH */
+/* LOGIN CONTAINER (99EXCH SIZE) */
 .contain {
   width: 92%;
-  max-width: 360px;         /* MATCHED WIDTH */
+  max-width: 350px;
   background: var(--card-bg);
-  padding: 32px 25px;       /* EXACT SPACING */
-  border-radius: 18px;      /* SAME ROUNDNESS */
+  padding: 28px 25px 32px 25px;
+  border-radius: 18px;
   box-shadow: var(--shadow);
   text-align: center;
 }
 
-/* TITLE */
+/* REMOVE LOGIN TITLE */
 .login-title {
-  font-size: 23px;
-  color: var(--primary);
-  font-weight: 600;
-  margin-bottom: 18px;
+  display: none !important;
 }
 
-/* INPUT FIELDS — EXACT SAME AS 99EXCH */
+/* INPUT FIELDS (99EXCH STYLE) */
 .input-group input {
   width: 100%;
-  height: 40px;
+  height: 42px;
   border: none;
   border-bottom: 1.8px solid var(--border-light);
   outline: none;
   font-size: 15px;
-  padding: 6px 4px;
-  margin-bottom: 22px;   /* Increased spacing */
+  padding: 4px 4px;
+  margin-bottom: 20px;
   background: transparent;
   font-weight: 500;
+}
+
+.input-group input::placeholder {
+  color: #777;
 }
 
 .input-group input:focus {
   border-bottom: 2px solid var(--primary);
 }
 
-/* BUTTONS */
+/* BUTTONS — SHARP CORNERS LIKE 99EXCH */
 button {
   width: 100%;
-  height: 44px;           
+  height: 44px;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;            /* same thick weight */
-  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 12px;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 6px;
-  border-radius: 6px;
+  border-radius: 0 !important;
 }
 
 .login-btn,
@@ -97,7 +98,7 @@ button {
   color: var(--text-light);
 }
 
-/* RECAPTCHA */
+/* RECAPTCHA INFO */
 .recaptcha-info {
   margin-top: 14px;
   font-size: 11.5px;
@@ -108,40 +109,48 @@ button {
 .recaptcha-info a {
   color: #0066cc;
   font-weight: 500;
+  text-decoration: none;
 }
 
-/* EMAIL */
+/* EMAIL (NO UNDERLINE) */
 .email-text {
   margin-top: 14px;
   font-size: 12px;
   color: #0066cc;
   font-weight: 500;
+  text-decoration: none !important;
 }
 
-/* WHATSAPP JOIN BUTTON */
+/* DOTTED LINE BELOW EMAIL */
+.email-text::after {
+  content: "";
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  border-bottom: 2px dotted var(--primary);
+}
+
+/* WHATSAPP JOIN TEXT (NO BOX) */
 .whatsapp-join {
   font-size: 12px;
-  margin-top: 16px;
-  padding: 8px 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
+  margin-top: 4px;
+  padding: 0;
   width: 100%;
-  background: #ffffff;
+  background: transparent;
+  border: none;
+  text-align: center;
+  font-weight: 600;
   color: var(--text-dark);
-  border: 2px dashed var(--primary);
-  text-decoration: none;
-  font-weight: 600;     /* bold like 99exch */
-  border-radius: 12px;  /* slightly more rounded */
+  display: block;
 }
 
 .wa-logo {
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
 }
 
-/* FLOATING WHATSAPP BUTTON */
+/* FLOATING WHATSAPP SUPPORT BUTTON */
 .wa-support {
   position: fixed;
   bottom: 20px;
@@ -163,5 +172,6 @@ button {
 }
 
 .wa-support:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
+
